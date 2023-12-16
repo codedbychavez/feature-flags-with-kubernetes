@@ -9,3 +9,15 @@ docker build -t backend .
 
 docker run -p 3000:3000 backend
 ```
+
+## Notes
+
+```bash
+docker compose up --build -d
+```
+
+```bash
+docker compose down
+```
+
+```bash
