@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-a-deployment
+  name: backend-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend-a
+      app: backend
   template:
     metadata:
       labels:
-        app: backend-a
+        app: backend
     spec:
       containers:
-        - name: backend-a-container
+        - name: backend-container
           image: backend-a:latest
           imagePullPolicy: Never
           ports:
