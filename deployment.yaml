@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: backend-node18:latest
+          image: backend-with-node18:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 3000
