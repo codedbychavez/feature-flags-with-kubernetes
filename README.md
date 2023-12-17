@@ -24,30 +24,34 @@ source venv/bin/activate
 pip install kubernetes
 ```
 
-## Running the backend
+2. Install the configcat client
 
 ```bash
-docker build -t backend .
+pip install configcat-client
+```
 
-docker run -p 3000:3000 backend
+## Setup the image
+
+1. Build the images for the backend that Kubernetes will use
+
+```bash
+docker build -f Dockerfile.with-node18 -t backend-with-node18:latest .
+```
+
+```bash
+docker build -f Dockerfile.with-node20 -t backend-with-node20:latest .
 ```
 
 ## Notes
 
-Use this command to run the backend in a container
-
-```bash
-docker compose up --build -d
-```
-
-```bash
-docker compose down
-```
-
-Delete the deployment
+Delete the deployments
 
 ```bash
 kubectl delete deployments --all
 ```
 
+Delete the services
 
+```bash
+kubectl delete services --all
+```
