@@ -44,4 +44,10 @@ docker compose up --build -d
 docker compose down
 ```
 
+Delete the deployment
+
+```bash
+kubectl delete deployments --all
+```
+
 
